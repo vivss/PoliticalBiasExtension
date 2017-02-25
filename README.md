@@ -1,1 +1,1 @@
-# wicHacksProject
+# WiCHacks Project
