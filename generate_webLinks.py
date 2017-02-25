@@ -1,3 +1,4 @@
+
 import sys
 
 f = open('Input.txt', "r")

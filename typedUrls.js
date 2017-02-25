@@ -51,21 +51,29 @@ function buildTypedUrlList(divName) {
     },
     function(historyItems) {
       // For each history item, get details on all visits.
+
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
-        if (!url.startsWith("https://www.nytimes.com/")) {
-          continue;
+
+        var news =
+        ["https://www.nytimes.com/",
+        "https://www.cnn.com"];
+
+        for (var j = 0; j < news.length; j++) {
+          if (url.startsWith(news[j])) {
+            var processVisitsWithUrl = function(url) {
+              // We need the url of the visited item to process the visit.
+              // Use a closure to bind the  url into the callback's args.
+              return function(visitItems) {
+                processVisits(url, visitItems);
+              };
+            };
+            chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
+            numRequestsOutstanding++;
+          }
         }
-        var processVisitsWithUrl = function(url) {
-          // We need the url of the visited item to process the visit.
-          // Use a closure to bind the  url into the callback's args.
-          return function(visitItems) {
-            processVisits(url, visitItems);
-          };
-        };
-        chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
-        numRequestsOutstanding++;
       }
+
       if (!numRequestsOutstanding) {
         onAllVisitsProcessed();
       }
