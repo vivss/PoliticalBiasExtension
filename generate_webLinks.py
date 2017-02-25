@@ -1,7 +1,7 @@
 
 import sys
 
-f = open('Input.txt', "r")
+f = open('input.txt', "r")
 newfile = open('output.txt', "w")
 
 for line in f:
@@ -27,9 +27,9 @@ for line in f:
 
 	if newcontent == '':
 		newcontent = line
-	sys.stdout.write(newcontent+".com\n")
+	sys.stdout.write('"'+newcontent+'.com"\n')
 	#print newcontent
-	newfile.write(newcontent+".com\n")
+	newfile.write('"'+newcontent+'.com"\n')
 
 
 f.close()
