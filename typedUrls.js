@@ -78,35 +78,7 @@ function buildTypedUrlList(divName) {
         onAllVisitsProcessed();
       }
     });
-    /*
-      for (var i = 0; i < historyItems.length; ++i) {
-        var url = historyItems[i].url;
 
-        var news =
-        ["https://www.nytimes.com/",
-        "https://www.cnn.com"];
-
-        for (var i = 0; i < news.length; i++) {
-          if (url.startsWith(news[i])) {
-            continue;
-          }
-        }
-        var processVisitsWithUrl = function(url) {
-          // We need the url of the visited item to process the visit.
-          // Use a closure to bind the  url into the callback's args.
-          return function(visitItems) {
-            processVisits(url, visitItems);
-          };
-        };
-        chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
-        numRequestsOutstanding++;
-      }
-
-      if (!numRequestsOutstanding) {
-        onAllVisitsProcessed();
-      }
-    });
-*/
 
   // Maps URLs to a count of the number of times the user typed that URL into
   // the omnibox.
