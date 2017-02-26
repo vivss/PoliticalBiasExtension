@@ -147,3 +147,7 @@ http://www.winningdemocrats.com
 http://www.wonkette.com
 http://www.theyoungturks.com
 http://www.zmagazine.com
+http://www.nymag.com/
+https://www.aclu.org/
+http://www.independent.co.uk/us
+http://www.liberalamerica.org/
