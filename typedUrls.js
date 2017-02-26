@@ -6,13 +6,16 @@
 // Open the link in a new tab of the current window.
 
 var media_left = [];
-var left_map = {};
 var media_leftCenter = [];
 var media_center = [];
 var media_rightCenter = [];
 var media_right = [];
+
+var left_map = {};
 var right_map = {};
 var leftcenter_map = {};
+var rightCenter_map = {};
+var center_map = {};
 
 function onAnchorClick(event) {
   chrome.tabs.create({
@@ -76,15 +79,9 @@ function buildTypedUrlList(divName) {
 
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
-        var trimmedUrl = trimURL(url);
+	     	var shortt = trimURL(url);
 
-        //console.log("media left length "+media_left.length);
-        //var news = media_left;
-
-        //console.log("newslength "+news.length);
-        //for (var j = 0; j < media_left.length; j++) {
-		var shortt = url.substring(0,20);
-          if (shortt in left_map || shortt in right_map || shortt in leftcenter_map) {
+          if (shortt in left_map || shortt in right_map || shortt in leftcenter_map || shortt in center_map || shortt in rightCenter_map) {
 			  console.log("TRIM IN THERE",shortt)
             var processVisitsWithUrl = function(url) {
               // We need the url of the visited item to process the visit.
@@ -203,10 +200,10 @@ var loadData2 = function loadData2(){
           if(xhr2.readyState == XMLHttpRequest.DONE && xhr2.status == 200)
           {
               media_leftCenter = xhr2.responseText.split("\n");
-			  for (var j = 0; j < media_leftCenter.length; j++) {
-				  var trim = media_leftCenter[j].substring(0,20);
-				  leftcenter_map[trim] = "left";
-			  };
+      			  for (var j = 0; j < media_leftCenter.length; j++) {
+      				  var trim = trimURL(media_leftCenter[j]);
+      				  leftcenter_map[trim] = "left";
+      			  };
               console.log("loading left center");
               resolve("loaded left center");
           }
@@ -226,8 +223,12 @@ var loadData3 = function loadData3(){
         if(xhr3.readyState == XMLHttpRequest.DONE && xhr3.status == 200)
         {
             media_center = xhr3.responseText.split("\n");
-			console.log("loading center data");
-			resolve("loaded center");
+            for (var j = 0; j < media_center.length; j++) {
+              var trim = trimURL(media_center[j]);
+              center_map[trim] = "right";
+            };
+      			console.log("loading center data");
+      			resolve("loaded center");
         }
 		
 	};
@@ -245,8 +246,12 @@ var loadData4 = function loadData4(){
           if(xhr4.readyState == XMLHttpRequest.DONE && xhr4.status == 200)
           {
               media_rightCenter = xhr4.responseText.split("\n");
-			  console.log("loading right center data");
-			  resolve("loaded right center");
+              for (var j = 0; j < media_rightCenter.length; j++) {
+                var trim = trimURL(media_rightCenter[j]);
+                rightCenter_map[trim] = "right";
+              };
+      			  console.log("loading right center data");
+      			  resolve("loaded right center");
           }
       };
       xhr4.send();
@@ -262,11 +267,11 @@ var loadData5 = function loadData5(){
           if(xhr5.readyState == XMLHttpRequest.DONE && xhr5.status == 200)
           {
               media_right = xhr5.responseText.split("\n");
-			  for (var j = 0; j < media_right.length; j++) {
-				  var trim = media_right[j].substring(0,20);
-				  right_map[trim] = "right";
-			  };
-			  console.log("loading right data");
+      			  for (var j = 0; j < media_right.length; j++) {
+      				  var trim = trimURL(media_right[j]);
+      				  right_map[trim] = "right";
+      			  };
+      			  console.log("loading right data");
               resolve("loaded right");
           }
       };
@@ -278,5 +283,7 @@ var loadData5 = function loadData5(){
 var trimURL = function trimURL(url){
   var result = url.split("://", 2);   // cut front
   var result2 = result[1].split('/');   // cut back
+   var finalResult = result2[0].trim()
+  console.log("original = "+url+ " trimmed= "+ finalResult + "length= "+finalResult.length);
   return result2[0].trim();
 }
