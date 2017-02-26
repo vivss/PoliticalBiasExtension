@@ -28,11 +28,12 @@ ul {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   padding: 5px;
+  color:gray;
 }
 
 button {
   margin-bottom: 10px;
-  background-color: #555555; /* Green */
+  background-color: #bcbcbc; /* Green */
     border: none;
     color: white;
     padding: 5px 10px;
@@ -40,4 +41,13 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
+    border-radius: 10px;
+}
+
+#suggest a {
+  text-decoration:underline;
+}
+
+button:focus {
+  outline:0;
 }
