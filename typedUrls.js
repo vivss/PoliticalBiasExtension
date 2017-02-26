@@ -351,7 +351,9 @@ function suggestArticle(bias){
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
-              $('#suggest').text(data.articles[0].url);
+
+              $('a#suggest-link').text(data.articles[0].title);
+              $('a#suggest-link').attr('href', data.articles[0].url);
               ran = Math.floor((Math.random()* (leftSites.length-1)) + 0);
               source = leftSites[ran].siteCode;
             }
@@ -367,7 +369,9 @@ function suggestArticle(bias){
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
-              $('#suggest').text(data.articles[0].url);
+              
+              $('a#suggest-link').text(data.articles[0].title);
+              $('a#suggest-link').attr('href', data.articles[0].url);
               ran = Math.floor((Math.random()* (rightCenterSites.length-1)) + 0);
               source = rightCenterSites[ran].siteCode;
             }
@@ -384,7 +388,9 @@ function suggestArticle(bias){
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
-              $('#suggest').text(data.articles[0].url);
+              
+              $('a#suggest-link').text(data.articles[0].title);
+              $('a#suggest-link').attr('href', data.articles[0].url);
               ran = Math.floor((Math.random()* (leftCenterSites.length-1)) + 0);
               source = leftCenterSites[ran].siteCode;
             }
