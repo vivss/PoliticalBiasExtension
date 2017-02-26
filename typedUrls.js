@@ -4,6 +4,13 @@
 
 // Event listner for clicks on links in a browser action popup.
 // Open the link in a new tab of the current window.
+
+var media_left = [];
+var media_leftCenter = [];
+var media_center = [];
+var media_rightCenter = [];
+var media_right = [];
+
 function onAnchorClick(event) {
   chrome.tabs.create({
     selected: true,
@@ -132,27 +139,59 @@ function buildTypedUrlList(divName) {
 
 
 
-
+    // left
     var xhr = new XMLHttpRequest();
     xhr.open('GET', chrome.extension.getURL('media_data/Left.txt'), true);
     xhr.onreadystatechange = function()
     {
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
         {
-            //... The content has been read in xhr.responseText
+            media_left = xhr.responseText.split("/n");
         }
     };
-    xhr.send();
+    // left center
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open('GET', chrome.extension.getURL('media_data/left_center.txt'), true);
+    xhr2.onreadystatechange = function()
+    {
+        if(xhr2.readyState == XMLHttpRequest.DONE && xhr2.status == 200)
+        {
+            media_leftCenter = xhr2.responseText.split("/n");
+        }
+    };
+    //center
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open('GET', chrome.extension.getURL('media_data/enter.txt'), true);
+    xhr3.onreadystatechange = function()
+    {
+        if(xhr3.readyState == XMLHttpRequest.DONE && xhr3.status == 200)
+        {
+            media_center = xhr3.responseText.split("/n");
+        }
+    };
+    // right center
+    var xhr4 = new XMLHttpRequest();
+    xhr4.open('GET', chrome.extension.getURL('media_data/right_center.txt'), true);
+    xhr4.onreadystatechange = function()
+    {
+        if(xhr4.readyState == XMLHttpRequest.DONE && xhr4.status == 200)
+        {
+            media_rightCenter = xhr4.responseText.split("/n");
+        }
+    };
+    // left center
+    var xhr5 = new XMLHttpRequest();
+    xhr5.open('GET', chrome.extension.getURL('media_data/right.txt'), true);
+    xhr5.onreadystatechange = function()
+    {
+        if(xhr5.readyState == XMLHttpRequest.DONE && xhr5.status == 200)
+        {
+            media_right = xhr5.responseText.split("/n");
+        }
+    };
 
 
-
-
-
-
-
-
-
-
+    //xhr.send();
     urlArray = [];
     for (var url in urlToCount) {
       urlArray.push(url);
