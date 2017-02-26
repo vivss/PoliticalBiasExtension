@@ -89,6 +89,7 @@ function buildTypedUrlList(divName) {
                 processVisits(url, visitItems);
               };
             };
+            var url = news[j];
             chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
             numRequestsOutstanding++;
           }
