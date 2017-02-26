@@ -27,9 +27,9 @@ for line in f:
 
 	if newcontent == '':
 		newcontent = line
-	sys.stdout.write('"http://www.'+newcontent+'.com"\n')
+	sys.stdout.write('http://www.'+newcontent+'.com\n')
 	#print newcontent
-	newfile.write('"http://www.'+newcontent+'.com"\n')
+	newfile.write('http://www.'+newcontent+'.com\n')
 
 
 f.close()
