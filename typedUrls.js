@@ -36,7 +36,7 @@ function buildPopupDom(divName, data) {
   for (var i = 0, ie = data.length; i < ie; ++i) {
     var a = document.createElement('a');
 	console.log("CREATE: ", data[i]);
-	
+
 	if(data[i] in left_map){
 		a.style.color = "blue";
 		a.href = left_map[data[i]];
@@ -129,7 +129,7 @@ function buildTypedUrlList(divName) {
       /*if (visitItems[i].transition != 'typed') {
         continue;
       }*/
-	  
+
 	  var test1 = trimURL(url);
 
       if (!urlToCount[test1]) {
@@ -159,6 +159,12 @@ function buildTypedUrlList(divName) {
     urlArray.sort(function(a, b) {
       return urlToCount[b] - urlToCount[a];
     });
+
+    var query = { active: true, currentWindow: true };
+
+    chrome.tabs.query(query, callback);
+
+    //currentTab(currentURL);
 
     buildPopupDom(divName, urlArray.slice(0, 10));
   };
@@ -191,7 +197,7 @@ var loadData1 = function loadData1(){
               media_left = xhr.responseText.split("\n");
       			  for (var j = 0; j < media_left.length; j++) {
       				  var trim = trimURL(media_left[j]);
-                console.log("in loadData1 trim val= " +trim+" trim length = "+trim.length);
+                //console.log("in loadData1 trim val= " +trim+" trim length = "+trim.length);
       				  left_map[trim] = media_left[j];
 			        }
               console.log("loading left data");
@@ -221,7 +227,7 @@ var loadData2 = function loadData2(){
           }
 
       };
-      xhr2.send();    
+      xhr2.send();
     });
 }
 
@@ -242,7 +248,7 @@ var loadData3 = function loadData3(){
       			console.log("loading center data");
       			resolve("loaded center");
         }
-		
+
 	};
 	xhr3.send();
     });
@@ -295,7 +301,14 @@ var loadData5 = function loadData5(){
 var trimURL = function trimURL(url){
   var result = url.split("://", 2);   // cut front
   var result2 = result[1].split('/');   // cut back
-   var finalResult = result2[0].trim()
-  console.log("original = "+url+ " trimmed= "+ finalResult + "length= "+finalResult.length);
+  var finalResult = result2[0].trim()
+  //console.log("original = "+url+ " trimmed= "+ finalResult + "length= "+finalResult.length);
   return result2[0].trim();
+}
+
+
+var callback = function callback(tabs) {
+  var currentTab = tabs[0]; // there will be only one in this array
+  console.log("current tab")
+  console.log(currentTab.url); // also has properties like currentTab.id
 }

@@ -3,7 +3,8 @@
   "version": "1.2",
   "description": "Looks at where you're getting your news from, and gives you suggestions to diversify your content",
   "permissions": [
-    "history"
+    "history",
+    "tabs"
   ],
 
   "icons": {
