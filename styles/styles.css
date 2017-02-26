@@ -2,17 +2,21 @@ body {
   min-width: 250px;
   font-family: 'Montserrat', sans-serif;
   color: #373D3F;
+  padding:0;
+  margin:0;
 }
-
 h2 {
   font-weight: normal;
   text-align: center;
-  padding:10px 10px 20px 10px;
-  border-bottom: 2px solid #0061ff;
+  padding:10px;
+  margin:0px;
+  border-bottom: 2px solid #6da5ff;
+  background-color: #6da5ff;
 }
 
 h3 {
   font-weight: normal;
+  padding-left:10px;
 }
 
 a {
@@ -46,6 +50,7 @@ button {
 
 #suggest a {
   text-decoration:underline;
+  padding:10px;
 }
 
 button:focus {
