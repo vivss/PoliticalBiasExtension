@@ -37,16 +37,17 @@ function buildPopupDom(divName, data) {
     var a = document.createElement('a');
     a.href = data[i];
 	console.log("CREATE: ", data[i]);
-	if(trimURL(data[i]) in left_map){
+	
+	if(data[i] in left_map){
 		a.style.color = "blue";
 	}
-	else if(trimURL(data[i]) in leftcenter_map){
+	else if(data[i] in leftcenter_map){
 		a.style.color = "lightblue";
 	}
-	else if(trimURL(data[i]) in rightCenter_map){
+	else if(data[i] in rightCenter_map){
 		a.styple.color = "pink";
 	}
-	else if(trimURL(data[i]) in right_map){
+	else if(data[i] in right_map){
 		a.style.color = "red";
 	}
     a.appendChild(document.createTextNode(data[i]));
@@ -122,12 +123,14 @@ function buildTypedUrlList(divName) {
       /*if (visitItems[i].transition != 'typed') {
         continue;
       }*/
+	  
+	  var test1 = trimURL(url);
 
-      if (!urlToCount[url]) {
-        urlToCount[url] = 0;
+      if (!urlToCount[test1]) {
+        urlToCount[test1] = 0;
       }
 
-      urlToCount[url]++;
+      urlToCount[test1]++;
     }
 
     // If this is the final outstanding call to processVisits(),
