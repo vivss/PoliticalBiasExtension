@@ -34,7 +34,7 @@
       var ran;
       $("button").click(function(){
 
-        //if liberal, suggest conservative media source
+        //if conservative, suggest liberal media source
         if(true){
           ran = Math.floor((Math.random()* (leftCenterSites.length)) + 1);
           source = leftCenterSites[ran].siteCode;
@@ -50,6 +50,7 @@
             }
           });
         }
+        //if liberal, suggest conservative media source
         else{
           ran = Math.floor((Math.random()* (rightCenterSites.length)) + 1);
           source = rightCenterSites[ran].siteCode;
