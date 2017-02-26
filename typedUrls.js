@@ -57,7 +57,21 @@ function buildTypedUrlList(divName) {
 
         var news =
         ["https://www.nytimes.com/",
-        "https://www.cnn.com"];
+        "https://www.cnn.com",
+        "https://www.yahoo.com",
+        "https://news.google.com/",
+        "http://www.huffingtonpost.com/",
+        "http://www.foxnews.com/",
+        "http://www.nbcnews.com/",
+        "http://www.dailymail.co.uk/",
+        "https://www.washingtonpost.com/",
+        "https://www.theguardian.com/",
+        "https://www.wsj.com/",
+        "http://abcnews.go.com/",
+        "http://www.bbc.co.uk/news",
+        "http://www.usatoday.com/",
+        "http://www.latimes.com/"
+        ];
 
         for (var j = 0; j < news.length; j++) {
           if (url.startsWith(news[j])) {
@@ -83,6 +97,9 @@ function buildTypedUrlList(divName) {
   // Maps URLs to a count of the number of times the user typed that URL into
   // the omnibox.
   var urlToCount = {};
+
+
+
 
   // Callback for chrome.history.getVisits().  Counts the number of
   // times a user visited a URL by typing the address.
@@ -112,6 +129,30 @@ function buildTypedUrlList(divName) {
   // This function is called when we have the final list of URls to display.
   var onAllVisitsProcessed = function() {
     // Get the top scorring urls.
+
+
+
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', chrome.extension.getURL('media_data/Left.txt'), true);
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+        {
+            //... The content has been read in xhr.responseText
+        }
+    };
+    xhr.send();
+
+
+
+
+
+
+
+
+
+
     urlArray = [];
     for (var url in urlToCount) {
       urlArray.push(url);
