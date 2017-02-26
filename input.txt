@@ -1,233 +1,148 @@
-<p style="text-align:center;"><a href="https://mediabiasfactcheck.com/abc-news/">ABC News<br />
-</a><a href="https://mediabiasfactcheck.com/above-the-law/">Above the Law<br />
-</a><a href="https://mediabiasfactcheck.com/aeon/">Aeon<br />
-</a><a href="https://mediabiasfactcheck.com/al-jazeera/">Al Jazeera<br />
-</a><a href="https://mediabiasfactcheck.com/al-monitor/">Al Monitor<br />
-</a><a href="https://mediabiasfactcheck.com/alan-guttmacher-institute/" target="_blank">Alan Guttmacher Institute<br />
-</a><a href="https://mediabiasfactcheck.com/alaska-dispatch-news/">Alaska Dispatch News<br />
-</a><a href="https://mediabiasfactcheck.com/albany-times-union/">Albany Times-Union<br />
-</a><a href="https://mediabiasfactcheck.com/akron-beacon-journal/">Akron Beacon Journal<br />
-</a><a href="https://mediabiasfactcheck.com/american-civil-liberties-union-aclu/">American Civil Liberties Union (ACLU)<br />
-</a><a href="https://mediabiasfactcheck.com/american-herald-tribune/">American Herald Tribune<br />
-</a><a href="https://mediabiasfactcheck.com/anti-defamation-league/">Anti-Defamation League<br />
-</a><a href="https://mediabiasfactcheck.com/ara-news/">Ara News<br />
-</a><a href="https://mediabiasfactcheck.com/arizona-daily-star/">Arizona Daily Star<br />
-</a><a href="https://mediabiasfactcheck.com/asheville-citizen-times/">Asheville Citizen-Times<br />
-</a><a href="https://mediabiasfactcheck.com/atlanta-journal-constitution/">Atlanta Journal-Constitution<br />
-</a><a href="https://mediabiasfactcheck.com/the-atlantic/">(The)Atlantic<br />
-</a><a href="https://mediabiasfactcheck.com/axios/">Axios<br />
-</a><a href="https://mediabiasfactcheck.com/baltimore-sun/">Baltimore Sun<br />
-</a><a href="https://mediabiasfactcheck.com/baptist-news-global/">Baptist News Global<br />
-</a><a href="https://mediabiasfactcheck.com/bbc/">BBC<br />
-</a><a href="https://mediabiasfactcheck.com/beijing-review/">Beijing Review<br />
-</a><a href="https://mediabiasfactcheck.com/berkshire-eagle/">Berkshire Eagle<br />
-</a><a href="https://mediabiasfactcheck.com/billmoyers-com/">BillMoyers.com<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/bloomberg/">Bloomberg<br />
-</a><a href="https://mediabiasfactcheck.com/bluestem-prairie/">Bluestem Prairie<br />
-</a><a href="https://mediabiasfactcheck.com/boston-globe/">Boston Globe<br />
-</a><a href="https://mediabiasfactcheck.com/boy-genius-report-bgr/">Boy Genius Report (BGR)<br />
-</a><a href="https://mediabiasfactcheck.com/brookings-institute/">Brookings Institute<br />
-</a><a href="https://mediabiasfactcheck.com/buffalo-news/">Buffalo News<br />
-</a><a href="https://mediabiasfactcheck.com/business-insider/">Business Insider<br />
-</a><a href="https://mediabiasfactcheck.com/bustle-magazine/">Bustle Magazine<br />
-</a><a href="https://mediabiasfactcheck.com/buzzfeed/">Buzzfeed<br />
-</a><a href="https://mediabiasfactcheck.com/calgary-herald/">Calgary Herald<br />
-</a><a href="https://mediabiasfactcheck.com/carolina-public-press/">Carolina Public Press<br />
-</a><a href="https://mediabiasfactcheck.com/cbc-news-canadian-broadcasting/">CBC News<br />
-</a><a href="https://mediabiasfactcheck.com/cbs-news/">CBS News<br />
-</a><a href="https://mediabiasfactcheck.com/cctv-america/">CCTV America<br />
-</a><a href="https://mediabiasfactcheck.com/center-for-international-policy/">Center for International Policy<br />
-</a><a href="https://mediabiasfactcheck.com/charleston-gazette-mail/">Charleston Gazette-Mail<br />
-</a><a href="https://mediabiasfactcheck.com/charlotte-observer/">Charlotte Observer<br />
-</a><a href="https://mediabiasfactcheck.com/the-chicago-reporter/">Chicago Reporter<br />
-</a><a href="https://mediabiasfactcheck.com/chicago-sun-times/">Chicago Sun Times<br />
-</a><a href="https://mediabiasfactcheck.com/chicago-tribune/">Chicago Tribune<br />
-</a><a href="https://mediabiasfactcheck.com/citizens-for-legitimate-government-clg-news/">Citizens for Legitimate Government<br />
-</a><a href="https://mediabiasfactcheck.com/citizens-for-tax-justice/">Citizens for Tax Justice<br />
-</a><a href="https://mediabiasfactcheck.com/cnbc/">CNBC<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/cnn/">CNN<br />
-</a><a href="https://mediabiasfactcheck.com/columbia-journalism-review/">Columbia Journalism Review (CJR)<br />
-</a><a href="https://mediabiasfactcheck.com/commonwealth-fund/">Commonwealth Fund<br />
-</a><a href="https://mediabiasfactcheck.com/credo-action/">Credo Action<br />
-</a><a href="https://mediabiasfactcheck.com/ctv-news/">CTV News</a><br />
-<a href="https://mediabiasfactcheck.com/deadline-hollywood/">Deadline Hollywood<br />
-</a><a href="https://mediabiasfactcheck.com/democrat-and-chronicle/">Democrat and Chronicle<br />
-</a><a href="https://mediabiasfactcheck.com/denver-post/">Denver Post<br />
-</a><a href="https://mediabiasfactcheck.com/detroit-free-press/">Detroit Free Press<br />
-</a><a href="https://mediabiasfactcheck.com/digg/">Digg<br />
-</a><a href="https://mediabiasfactcheck.com/dutch-daily-news/">Dutch Daily News<br />
-</a><a href="https://mediabiasfactcheck.com/dw-news/">DW News (Deutsche Welle)<br />
-</a><a href="https://mediabiasfactcheck.com/edmonton-journal/">Edmonton Journal<br />
-</a><a href="https://mediabiasfactcheck.com/el-pais/">El Pais<br />
-</a><a href="https://mediabiasfactcheck.com/el-paso-times/">El Paso Times<br />
-</a><a href="https://mediabiasfactcheck.com/emirates-247/">Emirates 24/7<br />
-</a><a href="https://mediabiasfactcheck.com/engadget/">Engadget<br />
-</a><a href="https://mediabiasfactcheck.com/euractiv/">Euractiv<br />
-</a><a href="https://mediabiasfactcheck.com/eu-observer/">EU Observer<br />
-</a><a href="https://mediabiasfactcheck.com/fairness-accuracy-in-reporting-fair/">Fairness &amp; Accuracy in Reporting (FAIR)<br />
-</a><a href="https://mediabiasfactcheck.com/fairvote/">FairVote<br />
-</a><a href="https://mediabiasfactcheck.com/feminist-frequency/">Feminist Frequency<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/fivethirtyeight/">FiveThirtyEight<br />
-</a><a href="https://mediabiasfactcheck.com/france24/">France24<br />
-</a><a href="https://mediabiasfactcheck.com/freakonomics-radio/">Freakonomics<br />
-</a><a href="https://mediabiasfactcheck.com/free-press/">Free Press<br />
-</a><a href="https://mediabiasfactcheck.com/fresno-bee/">Fresno Bee<br />
-</a><a href="https://mediabiasfactcheck.com/fusion/">Fusion<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/greensboro-news-and-record/">Greensboro News and Record<br />
-</a><a href="https://mediabiasfactcheck.com/global-news/">Global News<br />
-</a><a href="https://mediabiasfactcheck.com/global-post/">Global Post<br />
-</a><a href="https://mediabiasfactcheck.com/global-times-china/">Global Times<br />
-</a><a href="https://mediabiasfactcheck.com/governing-magazine/">Governing Magazine<br />
-</a><a href="https://mediabiasfactcheck.com/haaretz/">Haaretz<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/harpers/">Harpers<br />
-</a><a href="https://mediabiasfactcheck.com/the-hartford-courant/">Hartford Courant<br />
-</a><a href="https://mediabiasfactcheck.com/heavy/">Heavy.com<br />
-</a><a href="https://mediabiasfactcheck.com/helsinki-times/">Helsinki Times<br />
-</a><a href="https://mediabiasfactcheck.com/history-news-network/">History News Network<br />
-</a><a href="https://mediabiasfactcheck.com/hollywood-reporter/">Hollywood Reporter<br />
-</a><a href="https://mediabiasfactcheck.com/honolulu-star-advertiser/">Honolulu Star-Advertiser<br />
-</a><a href="https://mediabiasfactcheck.com/houston-chronicle/">Houston Chronicle<br />
-</a><a href="https://mediabiasfactcheck.com/hurriyet-daily-news/">Hurriyet Daily News<br />
-</a><a href="https://mediabiasfactcheck.com/ice-news/">Ice News<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/independent-media-center/">Independent Media Center<br />
-</a><a href="https://mediabiasfactcheck.com/indianapolis-star/">Indianapolis Star<br />
-</a><a href="https://mediabiasfactcheck.com/inquisitr/">Inquisitr<br />
-</a><a href="https://mediabiasfactcheck.com/inside-higher-ed/">Inside Higher Ed<br />
-</a><a href="https://mediabiasfactcheck.com/international-center-for-research-on-women/">International Center for Research on Women<br />
-</a><a href="https://mediabiasfactcheck.com/international-crisis-group/">International Crisis Group<br />
-</a><a href="https://mediabiasfactcheck.com/ipolitics/">iPolitics<br />
-</a><a href="https://mediabiasfactcheck.com/joint-center-for-political-and-economic-studies/">Joint Center for Political and Economic Studies<br />
-</a><a href="https://mediabiasfactcheck.com/journal-of-politics-and-society/">Journal of Politics and Society<br />
-</a><a href="https://mediabiasfactcheck.com/kansas-city-star/">Kansas City Star<br />
-</a><a href="https://mediabiasfactcheck.com/knight-foundation/">Knight Foundation<br />
-</a><a href="https://mediabiasfactcheck.com/kuow-npr/">KUOW NPR<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/la-times-los-angeles-times/">LA Times</a><span style="line-height:1.5;"> (Los Angeles Times)<br />
-</span><a href="https://mediabiasfactcheck.com/law-newz/">Law Newz<br />
-</a><a href="https://mediabiasfactcheck.com/lethbridge-herald/">Lethbridge Herald<br />
-</a><a href="https://mediabiasfactcheck.com/medium/">Medium<br />
-</a><a href="https://mediabiasfactcheck.com/metro-uk/">Metro UK<br />
-</a><a href="https://mediabiasfactcheck.com/mexico-daily-news/">Mexico Daily News<br />
-</a><a href="https://mediabiasfactcheck.com/miami-herald/">Miami Herald<br />
-</a><a href="https://mediabiasfactcheck.com/miami-new-times/">Miami New Times<br />
-</a><a href="https://mediabiasfactcheck.com/mic/">Mic<br />
-</a><a href="https://mediabiasfactcheck.com/milwaukee-journal-sentinel/">Milwaukee Journal-Sentinel<br />
-</a><a href="https://mediabiasfactcheck.com/minneapolis-star-tribune/">Minneapolis Star Tribune<br />
-</a><a href="https://mediabiasfactcheck.com/mint-press-news/">Mint Press News<br />
-</a><a href="https://mediabiasfactcheck.com/monthly-review/">Monthly Review<br />
-</a><a href="https://mediabiasfactcheck.com/montreal-gazette/">Montreal Gazette<br />
-</a><a href="https://mediabiasfactcheck.com/morning-consult/">Morning Consult<br />
-</a><a href="https://mediabiasfactcheck.com/moscow-times/">Moscow Times<br />
-</a><a href="https://mediabiasfactcheck.com/natural-resource-governance-institute/">Natural Resource Governance Institute<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/nbc-news/">NBC News<br />
-</a><a href="https://mediabiasfactcheck.com/nc-policy-watch/">NC Policy Watch<br />
-</a><a href="https://mediabiasfactcheck.com/news-com-au/">News.com.au<br />
-</a><a href="https://mediabiasfactcheck.com/newsday/">Newsday</a><br />
-<a href="https://mediabiasfactcheck.com/newsone/">NewsOne<br />
-</a><a href="https://mediabiasfactcheck.com/newsweek/">Newsweek<br />
-</a><a href="https://mediabiasfactcheck.com/newsy/">Newsy<br />
-</a><a href="https://mediabiasfactcheck.com/new-left-review/">New Left Review<br />
-</a><a href="https://mediabiasfactcheck.com/new-matilda/">New Matilda<br />
-</a><a href="https://mediabiasfactcheck.com/new-moderate/">New Moderate<br />
-</a><a href="https://mediabiasfactcheck.com/new-york-daily-news/">New York Daily News<br />
-</a><a href="https://mediabiasfactcheck.com/news-and-guts/">News and Guts<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/npr/">NPR<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/new-york-times/">New York Times<br />
-</a><a href="https://mediabiasfactcheck.com/oil-and-water-dont-mix/">Oil and Water Don&#8217;t Mix<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/opposing-views/">Opposing Views<br />
-</a><a href="https://mediabiasfactcheck.com/ozy-media/">Ozy Media<br />
-</a><a href="https://mediabiasfactcheck.com/panam-post/">PanAm Post<br />
-</a><a href="https://mediabiasfactcheck.com/pbs-news-hour/">PBS News Hour<br />
-</a><a href="https://mediabiasfactcheck.com/philadelphia-inquirer/">Philadelphia Inquirer<br />
-</a><a href="https://mediabiasfactcheck.com/philippine-daily-inquirer/">Philippine Daily Inquirer<br />
-</a><a href="https://mediabiasfactcheck.com/pittsburgh-post-gazette/">Pittsburgh Post-Gazette<br />
-</a><a href="https://mediabiasfactcheck.com/political-critique/">Political Critique<br />
-</a><a href="https://mediabiasfactcheck.com/politico/">Politico<br />
-</a><a href="https://mediabiasfactcheck.com/portland-press-herald/">Portland Press-Herald<br />
-</a><a href="https://mediabiasfactcheck.com/press-tv/">Press TV<br />
-</a><a href="https://mediabiasfactcheck.com/propublica/">Propublica<br />
-</a><a href="https://mediabiasfactcheck.com/prospect-magazine/">Prospect Magazine<br />
-</a><a href="https://mediabiasfactcheck.com/the-providence-journal/">Providence Journal<br />
-</a><a href="https://mediabiasfactcheck.com/public-radio-international-pri/">Public Radio International (PRI)<br />
-</a><a href="https://mediabiasfactcheck.com/putintrump-org/">PutinTrump.org<br />
-</a><a href="https://mediabiasfactcheck.com/quartz/">Quartz<br />
-</a><a href="https://mediabiasfactcheck.com/radio-free-asia/">Radio Free Asia<br />
-</a><a href="https://mediabiasfactcheck.com/raleigh-news-observer/">Raleigh News &amp; Observer<br />
-</a><a href="https://mediabiasfactcheck.com/rationalwiki/">RationalWiki<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/real-news-network/">Real News Network<br />
-</a><a href="https://mediabiasfactcheck.com/reveal-center-for-investigative-reporting/">Reveal &#8211; Center for Investigative Journalism<br />
-</a><a href="https://mediabiasfactcheck.com/roanoke-times/">Roanoke Times<br />
-</a><a href="https://mediabiasfactcheck.com/rolling-stone/">Rolling Stone<br />
-</a><a href="https://mediabiasfactcheck.com/roosevelt-institute/">Roosevelt Institute</a><br />
-<a href="https://mediabiasfactcheck.com/rudaw/">Rudaw<br />
-</a><a href="https://mediabiasfactcheck.com/sacramento-bee/">Sacramento Bee<br />
-</a><a href="https://mediabiasfactcheck.com/salt-lake-tribune/">Salt Lake Tribune<br />
-</a><a href="https://mediabiasfactcheck.com/san-antonio-express-news/">San Antonio Express-News<br />
-</a><a href="https://mediabiasfactcheck.com/san-francisco-chronicle/">San Francisco Chronicle<br />
-</a><a href="https://mediabiasfactcheck.com/san-jose-mercury-news/">San Jose Mercury News<br />
-</a><a href="https://mediabiasfactcheck.com/scoopwhoop/">Scoopwhoop<br />
-</a><a href="https://mediabiasfactcheck.com/seattle-post-intelligencer/">Seattle Post-Intelligencer<br />
-</a><a href="https://mediabiasfactcheck.com/seattle-times/">Seattle Times<br />
-</a><a href="https://mediabiasfactcheck.com/second-nexus/">Second Nexus<br />
-</a><a href="https://mediabiasfactcheck.com/sky-news/">Sky News<br />
-</a><a href="https://mediabiasfactcheck.com/southern-poverty-law-center/">Southern Poverty Law Center<br />
-</a><a href="https://mediabiasfactcheck.com/spiegel-online/">Spiegel Online<br />
-</a><a href="https://mediabiasfactcheck.com/star-ledger/">Star-Ledger<br />
-</a><a href="https://mediabiasfactcheck.com/st-louis-post-dispatch/">St. Louis Post-Dispatch<br />
-</a><a href="https://mediabiasfactcheck.com/stopfake/">StopFake<br />
-</a><a href="https://mediabiasfactcheck.com/the-sun-magazine/">The Sun Magazine<br />
-</a><a href="https://mediabiasfactcheck.com/tampa-bay-times/">Tampa Bay Times<br />
-</a><a href="https://mediabiasfactcheck.com/the-age-australia/">The Age (Australia)<br />
-</a><a href="https://mediabiasfactcheck.com/the-century-foundation/">The Century Foundation<br />
-</a><a href="https://mediabiasfactcheck.com/the-christian-left/">The Christian Left<br />
-</a><a href="https://mediabiasfactcheck.com/the-courier-journal/">The Courier-Journal<br />
-</a><a href="https://mediabiasfactcheck.com/the-daily-climate/">The Daily Climate<br />
-</a><a href="https://mediabiasfactcheck.com/the-economic-times/">The Economic Times<br />
-</a><a href="https://mediabiasfactcheck.com/fifth-column-news/">The Fifth Column<br />
-</a><a href="https://mediabiasfactcheck.com/the-forward/">The Forward<br />
-</a><a href="https://mediabiasfactcheck.com/the-globe-and-mail/">The Globe and Mail (Toronto)<br />
-</a><a href="https://mediabiasfactcheck.com/the-guardian/">The Guardian<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/the-hill/">The Hill<br />
-</a><a href="https://mediabiasfactcheck.com/the-hindu/">The Hindu<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/the-independent/">The Independent<br />
-</a><a href="https://mediabiasfactcheck.com/the-intercept/">The Intercept<br />
-</a><a href="https://mediabiasfactcheck.com/the-irish-times/">The Irish Times<br />
-</a><a href="https://mediabiasfactcheck.com/the-irrawaddy/">The Irrawaddy<br />
-</a><a href="https://mediabiasfactcheck.com/the-jerusalem-report/">The Jerusalem Report<br />
-</a><a href="https://mediabiasfactcheck.com/the-journal-news/">The Journal News<br />
-</a><a href="https://mediabiasfactcheck.com/the-local-norway/">The Local (Norway)<br />
-</a><a href="https://mediabiasfactcheck.com/the-monthly-australia/">The Monthly (Australia)<br />
-</a><a href="https://mediabiasfactcheck.com/the-nation-institute/">The Nation Institute<br />
-</a><a href="https://mediabiasfactcheck.com/the-news-tribune/">The News Tribune<br />
-</a><a href="https://mediabiasfactcheck.com/the-plain-dealer/">The Plain Dealer<br />
-</a><a href="https://mediabiasfactcheck.com/the-observer/">The Observer<br />
-</a><a href="https://mediabiasfactcheck.com/the-oslo-times/">The Oslo Times<br />
-</a><a href="https://mediabiasfactcheck.com/the-record-new-jersey/">The Record (NJ)<br />
-</a><a href="https://mediabiasfactcheck.com/the-stranger/">The Stranger<br />
-</a><a href="https://mediabiasfactcheck.com/the-sun-magazine/">The Sun Magazine<br />
-</a><a href="https://mediabiasfactcheck.com/the-sydney-morning-herald/">The Sydney Morning Herald<br />
-</a><a href="https://mediabiasfactcheck.com/the-tyee/">The Tyee<br />
-</a><a href="https://mediabiasfactcheck.com/the-verge/">The Verge<br />
-</a><a href="https://mediabiasfactcheck.com/the-week/">The Week<br />
-</a><a href="https://mediabiasfactcheck.com/the-zero-hour/">The Zero Hour<br />
-</a><a href="https://mediabiasfactcheck.com/thomson-reuters-foundation/">Thomson Reuters Foundation<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/time/">Time<br />
-</a><a href="https://mediabiasfactcheck.com/times-colonist/">Times-Colonist<br />
-</a><a href="https://mediabiasfactcheck.com/times-of-israel/">Times of Israel<br />
-</a><a href="https://mediabiasfactcheck.com/the-times-picayune/">Times-Picayune<br />
-</a><a href="https://mediabiasfactcheck.com/tomdispatch-com/">TomDispatch.com<br />
-</a><a href="https://mediabiasfactcheck.com/to-inform-is-to-influence/">To Inform is to Influence<br />
-</a><a href="https://mediabiasfactcheck.com/toronto-star/">Toronto Star<br />
-</a><a href="https://mediabiasfactcheck.com/unicorn-riot/">Unicorn Riot<br />
-</a><a href="https://mediabiasfactcheck.com/united-federation-of-teachers-uft/">United Federation of Teachers (UFT)<br />
-</a><a href="https://mediabiasfactcheck.com/urban-institute/">Urban Institute<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/us-news-world-report/">US News World Report<br />
-</a><a href="https://mediabiasfactcheck.com/vancouver-sun/">Vancouver Sun<br />
-</a><a href="https://mediabiasfactcheck.com/vice-news/">Vice News<br />
-</a><a href="https://mediabiasfactcheck.com/votevets-org/">VoteVets.org<br />
-</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/washington-post/">Washington Post<br />
-</a><a href="https://mediabiasfactcheck.com/wgn-news/">WGN News<br />
-</a><a href="https://mediabiasfactcheck.com/windsor-star/">Windsor Star<br />
-</a><a href="https://mediabiasfactcheck.com/wired-magazine/">Wired Magazine<br />
-</a><a href="https://mediabiasfactcheck.com/wnyc/">WNYC<br />
-</a><a href="https://mediabiasfactcheck.com/world-affairs-journal/">World Affairs Journal<br />
-</a><a href="https://mediabiasfactcheck.com/yahoo-news/">Yahoo News</a></p>
+<p style="text-align:center;"><a href="https://mediabiasfactcheck.com/addicting-info/">Addicting Info<br />
+</a><a href="https://mediabiasfactcheck.com/advocate/">Advocate<br />
+</a><a href="https://mediabiasfactcheck.com/all-thats-fab/">All That&#8217;s Fab<br />
+</a><a href="https://mediabiasfactcheck.com/alternative-media-syndicate/">Alternative Media Syndicate<br />
+</a><a href="https://mediabiasfactcheck.com/alternet/">Alternet<br />
+</a><a href="https://mediabiasfactcheck.com/amandla/">Amandla<br />
+</a><a href="https://mediabiasfactcheck.com/americablog/">AmericaBlog<br />
+</a><a href="https://mediabiasfactcheck.com/american-bridge-21st-century/">American Bridge 21st Century<br />
+</a><a href="https://mediabiasfactcheck.com/american-news-x/">American News X<br />
+</a><a href="https://mediabiasfactcheck.com/backed-by-fact/">Backed by Fact<br />
+</a><a href="https://mediabiasfactcheck.com/bay-area-reporter/">Bay Area Reporter<br />
+</a><a href="https://mediabiasfactcheck.com/bipartisan-report/">Bipartisan Report<br />
+</a><a href="https://mediabiasfactcheck.com/black-agenda-report/">Black Agenda Report<br />
+</a><a href="https://mediabiasfactcheck.com/black-lives-matter/">Black Lives Matter<br />
+</a><a href="https://mediabiasfactcheck.com/blue-dot-daily/">Blue Dot Daily<br />
+</a><a href="https://mediabiasfactcheck.com/blue-nation-review/">Blue Nation Review<br />
+</a><a href="https://mediabiasfactcheck.com/boing-boing/">Boing Boing<br />
+</a><a href="https://mediabiasfactcheck.com/bust-magazine/">Bust Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/canadian-dimension/">Canadian Dimension<br />
+</a><a href="https://mediabiasfactcheck.com/carbonated-tv/">Carbonated TV<br />
+</a><a href="https://mediabiasfactcheck.com/center-for-american-progress/">Center For American Progress<br />
+</a><a href="https://mediabiasfactcheck.com/center-for-media-and-democracy/">Center for Media and Democracy<br />
+</a><a href="https://mediabiasfactcheck.com/change-org/">Change.org<br />
+</a><a href="https://mediabiasfactcheck.com/chicago-reader/">Chicago Reader<br />
+</a><a href="https://mediabiasfactcheck.com/common-dreams/">Common Dreams<br />
+</a><a href="https://mediabiasfactcheck.com/cosmopolitan/">Cosmopolitan<br />
+</a><a href="https://mediabiasfactcheck.com/counterpunch/">CounterPunch<br />
+</a><a href="https://mediabiasfactcheck.com/crooks-and-liars/">Crooks and Liars<br />
+</a><a href="https://mediabiasfactcheck.com/current-affairs-magazine/">Current Affairs Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/daily-beast/">Daily Beast<br />
+</a><a href="https://mediabiasfactcheck.com/daily-dot/">Daily Dot</a><br />
+<a href="https://mediabiasfactcheck.com/daily-kos/">Daily Kos<br />
+</a><a href="https://mediabiasfactcheck.com/daily-mirror/">Daily Mirror<br />
+</a><a href="https://mediabiasfactcheck.com/daily-news-bin/">Daily News Bin<br />
+</a><a href="https://mediabiasfactcheck.com/dallas-voice/">Dallas Voice<br />
+</a><a href="https://mediabiasfactcheck.com/dead-state/">Dead State<br />
+</a><a href="https://mediabiasfactcheck.com/democracy-now/">Democracy Now<br />
+</a><a href="https://mediabiasfactcheck.com/democratic-underground/">Democratic Underground<br />
+</a><a href="https://mediabiasfactcheck.com/dissent-magazine/">Dissent Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/drudge-retort/">Drudge Retort<br />
+</a><a href="https://mediabiasfactcheck.com/economy-in-crisis/">Economy in Crisis<br />
+</a><a href="https://mediabiasfactcheck.com/electronic-intifada/">Electronic Intifada<br />
+</a><a href="https://mediabiasfactcheck.com/elite-daily/">Elite Daily<br />
+</a><a href="https://mediabiasfactcheck.com/esquire-magazine/">Esquire Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/everyday-feminism/">Everyday Feminism<br />
+</a><a href="https://mediabiasfactcheck.com/evonomics/">Evonomics<br />
+</a><a href="https://mediabiasfactcheck.com/filming-cops/">Filming Cops<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/forward-progressives/">Forward Progressives</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/free-thought-project/"><br />
+</a><a href="https://mediabiasfactcheck.com/gizmodo/">Gizmodo</a><br />
+<a href="https://mediabiasfactcheck.com/good-magazine/">Good Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/gq-magazine/">GQ Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/greenville-gazette/">Greenville Gazette<br />
+</a><a href="https://mediabiasfactcheck.com/groopspeak/">Groopspeak<br />
+</a><a href="https://mediabiasfactcheck.com/guardian-liberty-voice/">Guardian Liberty Voice<br />
+</a><a href="https://mediabiasfactcheck.com/huffington-post/">Huffington Post</a><a href="https://mediabiasfactcheck.com/if-you-only-news/"><br />
+</a><a href="https://mediabiasfactcheck.com/inequality-media/">Inequality Media<br />
+</a><a href="https://mediabiasfactcheck.com/in-these-times/">In These Times<br />
+</a><a href="https://mediabiasfactcheck.com/jacobin/">Jacobin<br />
+</a><a href="https://mediabiasfactcheck.com/jezebel/">Jezebel<br />
+</a><a href="https://mediabiasfactcheck.com/lavender-magazine/">Lavender Magazine</a><br />
+<a href="https://mediabiasfactcheck.com/left-action/">Left Action<br />
+</a><a href="https://mediabiasfactcheck.com/lgbtq-nation/">LGBTQ Nation<br />
+</a><a href="https://mediabiasfactcheck.com/liberal-america/">Liberal America<br />
+</a><a href="https://mediabiasfactcheck.com/liberal-plug/">Liberal Plug<br />
+</a><a href="https://mediabiasfactcheck.com/liberals-unite-samuel-warde/">Liberals Unite (Samuel Warde)<br />
+</a><a href="https://mediabiasfactcheck.com/little-green-footballs/">Little Green Footballs.<br />
+</a><a href="https://mediabiasfactcheck.com/mashable/">Mashable<br />
+</a><a href="https://mediabiasfactcheck.com/mean-left-hook/">Mean Left Hook<br />
+</a><a href="https://mediabiasfactcheck.com/mediaite/">Mediaite<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/media-matters/">Media Matters</a><a href="https://mediabiasfactcheck.com/medium/"><br />
+</a><a href="https://mediabiasfactcheck.com/modern-liberals/">Modern Liberals<br />
+</a><a href="https://mediabiasfactcheck.com/mother-jones/">Mother Jones<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/move-on/">Move On<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/msnbc/">MSNBC<br />
+</a><a href="https://mediabiasfactcheck.com/nation-of-change/">Nation of Change</a><br />
+<a href="https://mediabiasfactcheck.com/new-internationalist/">New Internationalist</a><a href="https://mediabiasfactcheck.com/new-left-review/"><br />
+</a><a href="https://mediabiasfactcheck.com/new-politics-magazine/">New Politics Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/new-republic/">New Republic<br />
+</a><a href="https://mediabiasfactcheck.com/new-statesman/">New Statesman<br />
+</a><a href="https://mediabiasfactcheck.com/new-york-magazine/">New York Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/new-yorker/">New Yorker<br />
+</a><a href="https://mediabiasfactcheck.com/news-corpse/">News Corpse<br />
+</a><a href="https://mediabiasfactcheck.com/newshounds/">NewsHounds<br />
+</a><a href="https://mediabiasfactcheck.com/newslogue/">NewsLogue<br />
+</a><a href="https://mediabiasfactcheck.com/nowthis-news/">NowThis News<br />
+</a><a href="https://mediabiasfactcheck.com/palmer-report/">Palmer Report<br />
+</a><a href="https://mediabiasfactcheck.com/paste-magazine/">Paste Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/people-magazine/">People Magazine<br />
+</a><a href="https://mediabiasfactcheck.com/pinac/">PINAC (Photography is not a Crime)<br />
+</a><a href="https://mediabiasfactcheck.com/pink-news/">Pink News<br />
+</a><a href="https://mediabiasfactcheck.com/political-updater/">Political Updater<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/politicususa/" target="_blank">Politicusa<br />
+</a><a href="https://mediabiasfactcheck.com/pravda-report/">Pravda Report<br />
+</a><a href="https://mediabiasfactcheck.com/press-progress/">Press Progress<br />
+</a><a href="https://mediabiasfactcheck.com/proud-democrat/">Proud Democrat<br />
+</a><a href="https://mediabiasfactcheck.com/rabble-ca/">Rabble.ca<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/raw-story/">Raw Story<br />
+</a><a href="https://mediabiasfactcheck.com/real-time-politics/">Real Time Politics<br />
+</a><a href="https://mediabiasfactcheck.com/red-pepper/">Red Pepper<br />
+</a><a href="https://mediabiasfactcheck.com/rewire/">Rewire<br />
+</a><a href="https://mediabiasfactcheck.com/revcom-us/">Revcom.us<br />
+</a><a href="https://mediabiasfactcheck.com/reverb-press/">Reverb Press<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/revolution-news/">Revolution News<br />
+</a><a href="https://mediabiasfactcheck.com/right-wing-watch/">Right Wing Watch</a><br />
+<a href="https://mediabiasfactcheck.com/ring-of-fire/">Ring of Fire</a><br />
+<a href="https://mediabiasfactcheck.com/salon/" target="_blank">Salon<br />
+</a><a href="https://mediabiasfactcheck.com/shareblue/">Shareblue<br />
+</a><a href="https://mediabiasfactcheck.com/slate/" target="_blank">Slate<br />
+</a><a href="https://mediabiasfactcheck.com/socialist-standard/">Socialist Standard<br />
+</a><a href="https://mediabiasfactcheck.com/sourcewatch/">SourceWatch<br />
+</a><a href="https://mediabiasfactcheck.com/st-pete-for-peace/">St. Pete for Peace<br />
+</a><a href="https://mediabiasfactcheck.com/talking-points-memo/">Talking Points Memo<br />
+</a><a href="https://mediabiasfactcheck.com/takepart/">TakePart<br />
+</a><a href="https://mediabiasfactcheck.com/telesur/">TeleSUR<br />
+</a><a href="https://mediabiasfactcheck.com/the-american-prospect/">The American Prospect<br />
+</a><a href="https://mediabiasfactcheck.com/the-blue-route/">The Blue Route<br />
+</a><a href="https://mediabiasfactcheck.com/the-canary-uk/">The Canary (UK)<br />
+</a><a href="https://mediabiasfactcheck.com/the-daily-banter/">The Daily Banter<br />
+</a><a href="https://mediabiasfactcheck.com/the-daily-buzz/">The Daily Buzz<br />
+</a><a href="https://mediabiasfactcheck.com/the-daily-vox/">The Daily Vox<br />
+</a><a href="https://mediabiasfactcheck.com/the-frisky/">The Frisky<br />
+</a><a href="https://mediabiasfactcheck.com/thegrio/">TheGrio<br />
+</a><a href="https://mediabiasfactcheck.com/the-militant/">The Militant<br />
+</a><a href="https://mediabiasfactcheck.com/the-morning-star/" target="_blank">The Morning Star<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/the-nation/">The Nation<br />
+</a><a href="https://mediabiasfactcheck.com/the-new-civil-rights-movement/">The New Civil Rights Movement<br />
+</a><a href="https://mediabiasfactcheck.com/the-other-98/">The Other 98%<br />
+</a><a href="https://mediabiasfactcheck.com/the-progressive/">The Progressive<br />
+</a><a href="https://mediabiasfactcheck.com/the-root/">The Root<br />
+</a><a href="https://mediabiasfactcheck.com/the-village-voice/">The Village Voice<br />
+</a><a href="https://mediabiasfactcheck.com/the-walrus/">The Walrus<br />
+</a><a href="https://mediabiasfactcheck.com/think-progress/">Think Progress<br />
+</a><a href="https://mediabiasfactcheck.com/this-magazine/" target="_blank">This<br />
+</a><a href="https://mediabiasfactcheck.com/towleroad/">Towleroad<br />
+</a><a href="https://mediabiasfactcheck.com/tribune-magazine-uk/" target="_blank">Tribune UK</a><br />
+<a href="https://mediabiasfactcheck.com/truthdig/">Truthdig</a><br />
+<a href="https://mediabiasfactcheck.com/truth-out/">Truth Out<br />
+</a><a href="https://mediabiasfactcheck.com/uproxx/">Uproxx<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/upworthy/" target="_blank">Upworthy</a><br />
+<a href="https://mediabiasfactcheck.com/us-political-post/">US Political Post<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/us-uncut/">US Uncut<br />
+</a><a href="https://mediabiasfactcheck.com/vanity-fair/">Vanity Fair</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/us-uncut/"><br />
+</a><a href="https://mediabiasfactcheck.com/vox/" target="_blank">Vox<br />
+</a><a href="https://mediabiasfactcheck.com/washington-monthly/">Washington Monthly<br />
+</a><a href="https://mediabiasfactcheck.com/winning-democrats/">Winning Democrats<br />
+</a><a href="https://mediabiasfactcheck.com/wonkette/">Wonkette<br />
+</a><a style="line-height:1.5;" href="https://mediabiasfactcheck.com/the-young-turks/" target="_blank">Young Turks<br />
+</a><a href="https://mediabiasfactcheck.com/z-magazine/">Z Magazine</a></p>

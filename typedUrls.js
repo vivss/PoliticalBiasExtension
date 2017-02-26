@@ -43,6 +43,8 @@ function buildPopupDom(divName, data) {
 // Search history to find up to ten links that a user has typed in,
 // and show those links in a popup.
 function buildTypedUrlList(divName) {
+  console.log("in build url list");
+
   // To look for history items visited in the last week,
   // subtract a week of microseconds from the current time.
   var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
@@ -89,6 +91,7 @@ function buildTypedUrlList(divName) {
                 processVisits(url, visitItems);
               };
             };
+            var url = news[j];
             chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
             numRequestsOutstanding++;
           }
@@ -99,7 +102,6 @@ function buildTypedUrlList(divName) {
         onAllVisitsProcessed();
       }
     });
-
 
   // Maps URLs to a count of the number of times the user typed that URL into
   // the omnibox.
@@ -136,62 +138,6 @@ function buildTypedUrlList(divName) {
   // This function is called when we have the final list of URls to display.
   var onAllVisitsProcessed = function() {
     // Get the top scorring urls.
-
-
-
-    // left
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', chrome.extension.getURL('media_data/Left.txt'), true);
-    xhr.onreadystatechange = function()
-    {
-        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
-        {
-            media_left = xhr.responseText.split("/n");
-        }
-    };
-    // left center
-    var xhr2 = new XMLHttpRequest();
-    xhr2.open('GET', chrome.extension.getURL('media_data/left_center.txt'), true);
-    xhr2.onreadystatechange = function()
-    {
-        if(xhr2.readyState == XMLHttpRequest.DONE && xhr2.status == 200)
-        {
-            media_leftCenter = xhr2.responseText.split("/n");
-        }
-    };
-    //center
-    var xhr3 = new XMLHttpRequest();
-    xhr3.open('GET', chrome.extension.getURL('media_data/enter.txt'), true);
-    xhr3.onreadystatechange = function()
-    {
-        if(xhr3.readyState == XMLHttpRequest.DONE && xhr3.status == 200)
-        {
-            media_center = xhr3.responseText.split("/n");
-        }
-    };
-    // right center
-    var xhr4 = new XMLHttpRequest();
-    xhr4.open('GET', chrome.extension.getURL('media_data/right_center.txt'), true);
-    xhr4.onreadystatechange = function()
-    {
-        if(xhr4.readyState == XMLHttpRequest.DONE && xhr4.status == 200)
-        {
-            media_rightCenter = xhr4.responseText.split("/n");
-        }
-    };
-    // left center
-    var xhr5 = new XMLHttpRequest();
-    xhr5.open('GET', chrome.extension.getURL('media_data/right.txt'), true);
-    xhr5.onreadystatechange = function()
-    {
-        if(xhr5.readyState == XMLHttpRequest.DONE && xhr5.status == 200)
-        {
-            media_right = xhr5.responseText.split("/n");
-        }
-    };
-
-
-    //xhr.send();
     urlArray = [];
     for (var url in urlToCount) {
       urlArray.push(url);
@@ -207,5 +153,100 @@ function buildTypedUrlList(divName) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  buildTypedUrlList("typedUrl_div");
+  mainLoadData();
+  //buildTypedUrlList("typedUrl_div");
 });
+
+// load data in correct order using promises
+var mainLoadData = function loadData(){
+    console.log("loading all data with risky promises");
+    Promise.all([loadData1(),loadData2(), loadData3(), loadData4(),loadData4()]).then(function(){
+        console.log("finished everything!");
+        buildTypedUrlList("typedUrl_div");
+
+    });
+}
+
+var loadData1 = function loadData1(){
+    return new Promise(function(resolve,reject){
+      // left
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', chrome.extension.getURL('media_data/Left.txt'), true);
+      xhr.onreadystatechange = function()
+      {
+          if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+          {
+              media_left = xhr.responseText.split("\n");
+              console.log("loading left data");
+              resolve("loaded left");
+          }
+      };
+      xhr.send();
+    });
+}
+
+var loadData2 = function loadData2(){
+    return new Promise(function(resolve,reject){
+      // left center
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', chrome.extension.getURL('media_data/left_center.txt'), true);
+      xhr.onreadystatechange = function()
+      {
+          if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+          {
+              media_leftCenter = xhr.responseText.split("\n");
+                console.log("loading left center");
+                resolve("loaded left center");
+          }
+
+      };
+      xhr.send();    
+    });
+}
+
+var loadData3 = function loadData3(){
+    //center
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open('GET', chrome.extension.getURL('media_data/center.txt'), true);
+    xhr3.onreadystatechange = function()
+    {
+        if(xhr3.readyState == XMLHttpRequest.DONE && xhr3.status == 200)
+        {
+            media_center = xhr3.responseText.split("\n");
+        }
+    };
+    return new Promise(function(resolve,reject){
+      resolve("loaded center");
+    });
+}
+
+var loadData4 = function loadData4(){
+    return new Promise(function(resolve,reject){
+       // right center
+      var xhr4 = new XMLHttpRequest();
+      xhr4.open('GET', chrome.extension.getURL('media_data/right_center.txt'), true);
+      xhr4.onreadystatechange = function()
+      {
+          if(xhr4.readyState == XMLHttpRequest.DONE && xhr4.status == 200)
+          {
+              media_rightCenter = xhr4.responseText.split("\n");
+          }
+      };
+      resolve("loaded right center");
+    });
+}
+// right
+var loadData5 = function loadData5(){
+    return new Promise(function(resolve,reject){
+      var xhr5 = new XMLHttpRequest();
+      xhr5.open('GET', chrome.extension.getURL('media_data/right.txt'), true);
+      xhr5.onreadystatechange = function()
+      {
+          if(xhr5.readyState == XMLHttpRequest.DONE && xhr5.status == 200)
+          {
+              media_right = xhr5.responseText.split("\n");
+              resolve("loaded right");
+          }
+      };
+    });
+}
