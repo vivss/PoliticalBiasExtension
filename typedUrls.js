@@ -160,13 +160,9 @@ function buildTypedUrlList(divName) {
       return urlToCount[b] - urlToCount[a];
     });
 
-    var query = { active: true, currentWindow: true };
-
-    chrome.tabs.query(query, callback);
-
-    //currentTab(currentURL);
 
     buildPopupDom(divName, urlArray.slice(0, 10));
+    currentTab();
   };
 }
 
@@ -307,8 +303,44 @@ var trimURL = function trimURL(url){
 }
 
 
-var callback = function callback(tabs) {
-  var currentTab = tabs[0]; // there will be only one in this array
-  console.log("current tab")
-  console.log(currentTab.url); // also has properties like currentTab.id
+var currentTab = function currentTab() {
+
+  var currentURL;
+
+  chrome.history.search({text: '', maxResults: 1}, function(data) {
+    data.forEach(function(page) {
+        console.log(page.url);
+        currentURL = page.url;
+        console.log("CURRENT TAB: ", currentURL);
+        var currentTrim = trimURL(currentURL);
+        console.log("CURRENT TRIM: ", currentTrim);
+
+        buildPopupDom2("current_div", currentTrim);
+
+    });
+  });
+
+}
+
+
+function buildPopupDom2(divName, currentT) {
+
+  if (currentT in left_map || currentT in right_map || currentT in leftcenter_map || currentT in center_map || currentT in rightCenter_map) {
+
+    var popupDiv = document.getElementById(divName);
+
+    var ul = document.createElement('ul');
+    popupDiv.appendChild(ul);
+
+    var a = document.createElement('a');
+  	console.log("CREATE: ", currentT);
+
+  	a.appendChild(document.createTextNode(currentT));
+    a.addEventListener('click', onAnchorClick);
+
+    var li = document.createElement('li');
+    li.appendChild(a);
+
+    ul.appendChild(li);
+  }
 }
