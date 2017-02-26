@@ -11,6 +11,7 @@ var media_leftCenter = [];
 var media_center = [];
 var media_rightCenter = [];
 var media_right = [];
+var right_map = {};
 
 function onAnchorClick(event) {
   chrome.tabs.create({
@@ -31,7 +32,13 @@ function buildPopupDom(divName, data) {
   for (var i = 0, ie = data.length; i < ie; ++i) {
     var a = document.createElement('a');
     a.href = data[i];
-    a.style.color = "blue";
+	console.log("CREATE: ", data[i]);
+	if(data[i].substring(0,20) in left_map){
+		a.style.color = "blue";
+	}
+	else if(data[i].substring(0,20) in right_map){
+		a.style.color = "red";
+	}
     a.appendChild(document.createTextNode(data[i]));
     a.addEventListener('click', onAnchorClick);
 
@@ -72,7 +79,7 @@ function buildTypedUrlList(divName) {
         //console.log("newslength "+news.length);
         //for (var j = 0; j < media_left.length; j++) {
 		var shortt = url.substring(0,20);
-          if (shortt in left_map) {
+          if (shortt in left_map || shortt in right_map) {
 			  console.log("TRIM IN THERE",shortt)
             var processVisitsWithUrl = function(url) {
               // We need the url of the visited item to process the visit.
@@ -151,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // load data in correct order using promises
 var mainLoadData = function loadData(){
     console.log("loading all data with risky promises");
-    Promise.all([loadData1(),loadData2(), loadData3(), loadData4(),loadData4()]).then(function(){
+    Promise.all([loadData1(),loadData2(), loadData3(), loadData4(),loadData5()]).then(function(){
         console.log("finished everything!");
         buildTypedUrlList("typedUrl_div");
 
@@ -183,35 +190,38 @@ var loadData1 = function loadData1(){
 var loadData2 = function loadData2(){
     return new Promise(function(resolve,reject){
       // left center
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', chrome.extension.getURL('media_data/left_center.txt'), true);
-      xhr.onreadystatechange = function()
+      var xhr2 = new XMLHttpRequest();
+      xhr2.open('GET', chrome.extension.getURL('media_data/left_center.txt'), true);
+      xhr2.onreadystatechange = function()
       {
-          if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+          if(xhr2.readyState == XMLHttpRequest.DONE && xhr2.status == 200)
           {
-              media_leftCenter = xhr.responseText.split("\n");
+              media_leftCenter = xhr2.responseText.split("\n");
                 console.log("loading left center");
                 resolve("loaded left center");
           }
 
       };
-      xhr.send();    
+      xhr2.send();    
     });
 }
 
 var loadData3 = function loadData3(){
     //center
-    var xhr3 = new XMLHttpRequest();
-    xhr3.open('GET', chrome.extension.getURL('media_data/center.txt'), true);
-    xhr3.onreadystatechange = function()
+    return new Promise(function(resolve,reject){
+		var xhr3 = new XMLHttpRequest();
+		xhr3.open('GET', chrome.extension.getURL('media_data/center.txt'), true);
+		xhr3.onreadystatechange = function()
     {
         if(xhr3.readyState == XMLHttpRequest.DONE && xhr3.status == 200)
         {
             media_center = xhr3.responseText.split("\n");
+			console.log("loading center data");
+			resolve("loaded center");
         }
-    };
-    return new Promise(function(resolve,reject){
-      resolve("loaded center");
+		
+	};
+	xhr3.send();
     });
 }
 
@@ -225,9 +235,11 @@ var loadData4 = function loadData4(){
           if(xhr4.readyState == XMLHttpRequest.DONE && xhr4.status == 200)
           {
               media_rightCenter = xhr4.responseText.split("\n");
+			  console.log("loading right center data");
+			  resolve("loaded right center");
           }
       };
-      resolve("loaded right center");
+      xhr4.send();
     });
 }
 // right
@@ -240,8 +252,14 @@ var loadData5 = function loadData5(){
           if(xhr5.readyState == XMLHttpRequest.DONE && xhr5.status == 200)
           {
               media_right = xhr5.responseText.split("\n");
+			  for (var j = 0; j < media_right.length; j++) {
+				  var trim = media_right[j].substring(0,20);
+				  right_map[trim] = "right";
+			  };
+			  console.log("loading right data");
               resolve("loaded right");
           }
       };
+	  xhr5.send();
     });
 }
