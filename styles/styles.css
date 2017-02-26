@@ -19,3 +19,7 @@ a {
   text-decoration: none;
   color: #373D3F;
 }
+
+ul {
+  list-style: none;
+}

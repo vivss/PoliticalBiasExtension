@@ -36,7 +36,7 @@ function buildPopupDom(divName, data) {
   for (var i = 0, ie = data.length; i < ie; ++i) {
     var a = document.createElement('a');
 	console.log("CREATE: ", data[i]);
-	
+
 	if(data[i] in left_map){
 		a.style.color = "blue";
 		a.href = left_map[data[i]];
@@ -66,16 +66,18 @@ function buildPopupDom(divName, data) {
   }
 
   //if conservative
-  if((left_map.length + leftcenter_map.length) < (right_map.length + rightCenter_map.length)){
+  if((media_left.length + media_leftCenter.length) < (media_right.length + media_rightCenter.length)){
     var bias = 1;
     suggestArticle(bias);
   }
   //else if liberal
-  else if ((left_map.length + leftcenter_map.length) > (right_map.length + rightCenter_map.length)){
+  else if ((media_left.length + media_leftCenter.length) > (media_right.length + media_rightCenter.length)){
     var bias = 0;
     suggestArticle(bias);
   }
   else {
+    console.log(media_left.length + media_leftCenter.length);
+    console.log(media_right.length + media_rightCenter.length);
     var bias = 2;
     suggestArticle(bias);
   }
@@ -143,7 +145,7 @@ function buildTypedUrlList(divName) {
       /*if (visitItems[i].transition != 'typed') {
         continue;
       }*/
-	  
+
 	  var test1 = trimURL(url);
 
       if (!urlToCount[test1]) {
@@ -174,7 +176,9 @@ function buildTypedUrlList(divName) {
       return urlToCount[b] - urlToCount[a];
     });
 
+
     buildPopupDom(divName, urlArray.slice(0, 10));
+    currentTab();
   };
 }
 
@@ -234,7 +238,7 @@ var loadData2 = function loadData2(){
           }
 
       };
-      xhr2.send();    
+      xhr2.send();
     });
 }
 
@@ -255,7 +259,7 @@ var loadData3 = function loadData3(){
       			console.log("loading center data");
       			resolve("loaded center");
         }
-		
+
 	};
 	xhr3.send();
     });
@@ -308,10 +312,52 @@ var loadData5 = function loadData5(){
 var trimURL = function trimURL(url){
   var result = url.split("://", 2);   // cut front
   var result2 = result[1].split('/');   // cut back
-   var finalResult = result2[0].trim()
+  var finalResult = result2[0].trim()
   //console.log("original = "+url+ " trimmed= "+ finalResult + "length= "+finalResult.length);
   return result2[0].trim();
 }
+
+var currentTab = function currentTab() {
+
+  var currentURL;
+
+  chrome.history.search({text: '', maxResults: 1}, function(data) {
+    data.forEach(function(page) {
+        console.log(page.url);
+        currentURL = page.url;
+        console.log("CURRENT TAB: ", currentURL);
+        var currentTrim = trimURL(currentURL);
+        console.log("CURRENT TRIM: ", currentTrim);
+
+        buildPopupDom2("current_div", currentTrim);
+
+    });
+  });
+
+}
+
+
+function buildPopupDom2(divName, currentT) {
+
+  if (currentT in left_map || currentT in right_map || currentT in leftcenter_map || currentT in center_map || currentT in rightCenter_map) {
+
+    var popupDiv = document.getElementById(divName);
+
+    var ul = document.createElement('ul');
+    popupDiv.appendChild(ul);
+
+    var a = document.createElement('a');
+  	console.log("CREATE: ", currentT);
+
+  	a.appendChild(document.createTextNode(currentT));
+    a.addEventListener('click', onAnchorClick);
+
+    var li = document.createElement('li');
+    li.appendChild(a);
+
+    ul.appendChild(li);
+  }
+
 
 function suggestArticle(bias){
     var lines = [];
@@ -324,17 +370,17 @@ function suggestArticle(bias){
                  {site:'http://www.cnn.com', siteCode:'cnn'},
                  {site:'http://www.engadget.com', siteCode:'engadget'},
                  {site:'http://www.metrouk.com', siteCode:'metro'},
-                 {site:'http://www.newsweek.com', siteCode:'newsweek'}, 
-                 {site:'http://www.skynews.com', siteCode:'sky-news'}, 
-                 {site:'http://www.spiegelonline.com', siteCode:'spiegel-online'}, 
-                 {site:'http://www.theguardian.com', siteCode:'the-guardian-uk'}, 
-                 {site:'http://www.thehindu.com', siteCode:'the-hindu'}, 
+                 {site:'http://www.newsweek.com', siteCode:'newsweek'},
+                 {site:'http://www.skynews.com', siteCode:'sky-news'},
+                 {site:'http://www.spiegelonline.com', siteCode:'spiegel-online'},
+                 {site:'http://www.theguardian.com', siteCode:'the-guardian-uk'},
+                 {site:'http://www.thehindu.com', siteCode:'the-hindu'},
                  {site:'http://www.time.com', siteCode:'time'},
                  {site:'http://www.wiredmagazine.com', siteCode:'wired-de'}];
-    var leftSites = [{site:'http://www.mashable.com', siteCode:'mashable'}, 
+    var leftSites = [{site:'http://www.mashable.com', siteCode:'mashable'},
                      {site:'http://www.newyorkmagazine.com', siteCode:'new-york-magazine'},
                      {site:'http://www.huffingtonpost.com', siteCode:'the-huffington-post'}];
-    var rightCenterSites = [{site:'http://www.fortunemagazine.com', siteCode:'fortune'}, 
+    var rightCenterSites = [{site:'http://www.fortunemagazine.com', siteCode:'fortune'},
                      {site:'http://www.wallstreetjournal.com', siteCode:'the-wall-street-journal'}];
    $(document).ready(function(){
       var source;
@@ -345,7 +391,7 @@ function suggestArticle(bias){
         if(bias == 1){
           ran = Math.floor((Math.random()* (leftSites.length)) + 1);
           source = leftSites[ran].siteCode;
-          
+
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
@@ -367,7 +413,7 @@ function suggestArticle(bias){
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
-              
+
               $('a#suggest-link').text(data.articles[0].title);
               $('a#suggest-link').attr('href', data.articles[0].url);
               ran = Math.floor((Math.random()* (rightCenterSites.length-1)) + 0);
@@ -386,7 +432,7 @@ function suggestArticle(bias){
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
-              
+
               $('a#suggest-link').text(data.articles[0].title);
               $('a#suggest-link').attr('href', data.articles[0].url);
               ran = Math.floor((Math.random()* (leftCenterSites.length-1)) + 0);
@@ -397,6 +443,7 @@ function suggestArticle(bias){
             }
           });
         }
-      }); 
+      });
     });
+}
 }
