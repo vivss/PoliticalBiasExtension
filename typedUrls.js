@@ -444,6 +444,26 @@ function buildPopupDom2(divName, currentT) {
     li.appendChild(a);
 
     ul.appendChild(li);
+
+    if(currentT in left_map){
+  		a.style.color = "blue";
+  		a.href = left_map[currentT];
+  	}
+  	else if(currentT in leftcenter_map){
+  		a.style.color = "lightblue";
+  		a.href = leftcenter_map[currentT];
+  	}
+  	else if(currentT in rightCenter_map){
+  		a.style.color = "pink";
+  		a.href = rightCenter_map[currentT];
+  	}
+  	else if(currentT in right_map){
+  		a.style.color = "red";
+  		a.href = right_map[dcurrentT];
+  	}
+  	else{
+  		a.href = center_map[currentT];
+  	}
   }
   else {
     var popupDiv = document.getElementById("hide");
