@@ -359,7 +359,11 @@ function buildPopupDom2(divName, currentT) {
 
     ul.appendChild(li);
   }
-
+  else {
+    var popupDiv = document.getElementById("hide");
+    popupDiv.style.display = "none";
+  }
+}
 
 function suggestArticle(bias){
     var lines = [];
@@ -447,5 +451,4 @@ function suggestArticle(bias){
         }
       });
     });
-}
 }
