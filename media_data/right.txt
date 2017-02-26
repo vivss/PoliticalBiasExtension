@@ -130,3 +130,7 @@ http://www.westernjournalism.com
 http://www.worldnetdailywnd.com
 http://www.yellowhammernews.com
 http://www.youngconservatives.com
+http://www.lifenews.com/
+http://www.rightwingnews.com/
+https://www.gopthedailydose.com/
+http://www.conservativetribune.com/

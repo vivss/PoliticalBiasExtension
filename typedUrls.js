@@ -69,7 +69,6 @@ function buildPopupDom(divName, data) {
 // Search history to find up to ten links that a user has typed in,
 // and show those links in a popup.
 function buildTypedUrlList(divName) {
-  console.log("in build url list");
 
   // To look for history items visited in the last week,
   // subtract a week of microseconds from the current time.
@@ -86,13 +85,13 @@ function buildTypedUrlList(divName) {
     },
     function(historyItems) {
       // For each history item, get details on all visits.
-
+      //console.log("url= "+historyItems[0].url +" date= "+historyItems[0].visitTime);
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
 	     	var shortt = trimURL(url);
 
           if (shortt in left_map || shortt in right_map || shortt in leftcenter_map || shortt in center_map || shortt in rightCenter_map) {
-			  console.log("TRIM IN THERE",shortt)
+			  //console.log("TRIM IN THERE",shortt)
             var processVisitsWithUrl = function(url) {
               // We need the url of the visited item to process the visit.
               // Use a closure to bind the  url into the callback's args.
@@ -191,7 +190,6 @@ var loadData1 = function loadData1(){
               media_left = xhr.responseText.split("\n");
       			  for (var j = 0; j < media_left.length; j++) {
       				  var trim = trimURL(media_left[j]);
-                console.log("in loadData1 trim val= " +trim+" trim length = "+trim.length);
       				  left_map[trim] = media_left[j];
 			        }
               console.log("loading left data");
@@ -296,6 +294,6 @@ var trimURL = function trimURL(url){
   var result = url.split("://", 2);   // cut front
   var result2 = result[1].split('/');   // cut back
    var finalResult = result2[0].trim()
-  console.log("original = "+url+ " trimmed= "+ finalResult + "length= "+finalResult.length);
+  //console.log("original = "+url+ " trimmed= "+ finalResult + "length= "+finalResult.length);
   return result2[0].trim();
 }
