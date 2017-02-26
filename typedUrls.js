@@ -12,6 +12,7 @@ var media_center = [];
 var media_rightCenter = [];
 var media_right = [];
 var right_map = {};
+var leftcenter_map = {};
 
 function onAnchorClick(event) {
   chrome.tabs.create({
@@ -35,6 +36,9 @@ function buildPopupDom(divName, data) {
 	console.log("CREATE: ", data[i]);
 	if(data[i].substring(0,20) in left_map){
 		a.style.color = "blue";
+	}
+	else if(data[i].substring(0,20) in leftcenter_map){
+		a.style.color = "lightblue";
 	}
 	else if(data[i].substring(0,20) in right_map){
 		a.style.color = "red";
@@ -79,7 +83,7 @@ function buildTypedUrlList(divName) {
         //console.log("newslength "+news.length);
         //for (var j = 0; j < media_left.length; j++) {
 		var shortt = url.substring(0,20);
-          if (shortt in left_map || shortt in right_map) {
+          if (shortt in left_map || shortt in right_map || shortt in leftcenter_map) {
 			  console.log("TRIM IN THERE",shortt)
             var processVisitsWithUrl = function(url) {
               // We need the url of the visited item to process the visit.
@@ -89,7 +93,7 @@ function buildTypedUrlList(divName) {
                 processVisits(url, visitItems);
               };
             };
-            //var url = media_left[j];
+            //var url = shortt;
             chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
             numRequestsOutstanding++;
           }
@@ -197,8 +201,12 @@ var loadData2 = function loadData2(){
           if(xhr2.readyState == XMLHttpRequest.DONE && xhr2.status == 200)
           {
               media_leftCenter = xhr2.responseText.split("\n");
-                console.log("loading left center");
-                resolve("loaded left center");
+			  for (var j = 0; j < media_leftCenter.length; j++) {
+				  var trim = media_leftCenter[j].substring(0,20);
+				  leftcenter_map[trim] = "left";
+			  };
+              console.log("loading left center");
+              resolve("loaded left center");
           }
 
       };
