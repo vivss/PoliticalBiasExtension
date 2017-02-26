@@ -37,13 +37,16 @@ function buildPopupDom(divName, data) {
     var a = document.createElement('a');
     a.href = data[i];
 	console.log("CREATE: ", data[i]);
-	if(data[i].substring(0,20) in left_map){
+	if(trimURL(data[i]) in left_map){
 		a.style.color = "blue";
 	}
-	else if(data[i].substring(0,20) in leftcenter_map){
+	else if(trimURL(data[i]) in leftcenter_map){
 		a.style.color = "lightblue";
 	}
-	else if(data[i].substring(0,20) in right_map){
+	else if(trimURL(data[i]) in rightCenter_map){
+		a.styple.color = "pink";
+	}
+	else if(trimURL(data[i]) in right_map){
 		a.style.color = "red";
 	}
     a.appendChild(document.createTextNode(data[i]));
