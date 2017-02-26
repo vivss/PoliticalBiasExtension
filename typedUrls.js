@@ -35,20 +35,26 @@ function buildPopupDom(divName, data) {
 
   for (var i = 0, ie = data.length; i < ie; ++i) {
     var a = document.createElement('a');
-    a.href = data[i];
 	console.log("CREATE: ", data[i]);
 	
 	if(data[i] in left_map){
 		a.style.color = "blue";
+		a.href = left_map[data[i]];
 	}
 	else if(data[i] in leftcenter_map){
 		a.style.color = "lightblue";
+		a.href = leftcenter_map[data[i]];
 	}
 	else if(data[i] in rightCenter_map){
 		a.styple.color = "pink";
+		a.href = rightCenter_map[data[i]];
 	}
 	else if(data[i] in right_map){
 		a.style.color = "red";
+		a.href = right_map[data[i]];
+	}
+	else{
+		a.href = center_map[data[i]];
 	}
     a.appendChild(document.createTextNode(data[i]));
     a.addEventListener('click', onAnchorClick);
@@ -186,7 +192,7 @@ var loadData1 = function loadData1(){
       			  for (var j = 0; j < media_left.length; j++) {
       				  var trim = trimURL(media_left[j]);
                 console.log("in loadData1 trim val= " +trim+" trim length = "+trim.length);
-      				  left_map[trim] = "left";
+      				  left_map[trim] = media_left[j];
 			        }
               console.log("loading left data");
               resolve("loaded left");
@@ -208,7 +214,7 @@ var loadData2 = function loadData2(){
               media_leftCenter = xhr2.responseText.split("\n");
       			  for (var j = 0; j < media_leftCenter.length; j++) {
       				  var trim = trimURL(media_leftCenter[j]);
-      				  leftcenter_map[trim] = "left";
+      				  leftcenter_map[trim] = media_leftCenter[j];
       			  };
               console.log("loading left center");
               resolve("loaded left center");
@@ -231,7 +237,7 @@ var loadData3 = function loadData3(){
             media_center = xhr3.responseText.split("\n");
             for (var j = 0; j < media_center.length; j++) {
               var trim = trimURL(media_center[j]);
-              center_map[trim] = "right";
+              center_map[trim] = media_center[j];
             };
       			console.log("loading center data");
       			resolve("loaded center");
@@ -254,7 +260,7 @@ var loadData4 = function loadData4(){
               media_rightCenter = xhr4.responseText.split("\n");
               for (var j = 0; j < media_rightCenter.length; j++) {
                 var trim = trimURL(media_rightCenter[j]);
-                rightCenter_map[trim] = "right";
+                rightCenter_map[trim] = media_rightCenter[j];
               };
       			  console.log("loading right center data");
       			  resolve("loaded right center");
@@ -275,7 +281,7 @@ var loadData5 = function loadData5(){
               media_right = xhr5.responseText.split("\n");
       			  for (var j = 0; j < media_right.length; j++) {
       				  var trim = trimURL(media_right[j]);
-      				  right_map[trim] = "right";
+      				  right_map[trim] = media_right[j];
       			  };
       			  console.log("loading right data");
               resolve("loaded right");
