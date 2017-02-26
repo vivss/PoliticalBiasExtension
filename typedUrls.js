@@ -46,7 +46,7 @@ function buildPopupDom(divName, data) {
 		a.href = leftcenter_map[data[i]];
 	}
 	else if(data[i] in rightCenter_map){
-		a.styple.color = "pink";
+		a.style.color = "pink";
 		a.href = rightCenter_map[data[i]];
 	}
 	else if(data[i] in right_map){
