@@ -6,6 +6,7 @@
 // Open the link in a new tab of the current window.
 
 var media_left = [];
+var left_map = {};
 var media_leftCenter = [];
 var media_center = [];
 var media_rightCenter = [];
@@ -65,24 +66,27 @@ function buildTypedUrlList(divName) {
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
 
-        console.log("media left length "+media_left.length);
-        var news = media_left;
+        //console.log("media left length "+media_left.length);
+        //var news = media_left;
 
-        console.log("newslength "+news.length);
-        for (var j = 0; j < news.length; j++) {
-          if (url.startsWith(news[j])) {
+        //console.log("newslength "+news.length);
+        //for (var j = 0; j < media_left.length; j++) {
+		var shortt = url.substring(0,20);
+          if (shortt in left_map) {
+			  console.log("TRIM IN THERE",shortt)
             var processVisitsWithUrl = function(url) {
               // We need the url of the visited item to process the visit.
               // Use a closure to bind the  url into the callback's args.
               return function(visitItems) {
+
                 processVisits(url, visitItems);
               };
             };
-            var url = news[j];
+            //var url = media_left[j];
             chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
             numRequestsOutstanding++;
           }
-        }
+        //}
       }
 
       if (!numRequestsOutstanding) {
@@ -164,6 +168,10 @@ var loadData1 = function loadData1(){
           if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
           {
               media_left = xhr.responseText.split("\n");
+			  for (var j = 0; j < media_left.length; j++) {
+				  var trim = media_left[j].substring(0,20);
+				  left_map[trim] = "left";
+			};
               console.log("loading left data");
               resolve("loaded left");
           }
