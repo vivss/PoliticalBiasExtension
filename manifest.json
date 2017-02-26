@@ -1,12 +1,25 @@
 {
-  "name": "Typed URL History",
+  "name": "Political Bias Detector",
   "version": "1.2",
-  "description": "Reads your history, and shows the top ten pages you go to by typing the URL.",
+  "description": "Looks at where you're getting your news from, and gives you suggestions to diversify your content",
   "permissions": [
     "history"
   ],
-  "browser_action": {
-    "default_popup": "typedUrls.html"
+
+  "icons": {
+  "19": "icon19.png",
+  "38": "icon38.png",
+  "48": "icon48.png",
+  "128": "icon128.png"
+},
+"browser_action": {
+  "default_icon": {
+    "19": "icon19.png",
+    "38": "icon38.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
+  "default_popup": "typedUrls.html"
+},
   "manifest_version": 2
 }
