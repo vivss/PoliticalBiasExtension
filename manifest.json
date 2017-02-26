@@ -6,7 +6,7 @@
     "history",
     "tabs"
   ],
-
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "icons": {
   "19": "icon19.png",
   "48": "icon48.png",

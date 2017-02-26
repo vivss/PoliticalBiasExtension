@@ -57,6 +57,7 @@
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
               console.log(data.articles[0].url);
+              alert(data.articles[0].url);
               ran = Math.floor((Math.random()* (rightCenterSites.length-1)) + 0);
               source = rightCenterSites[ran].siteCode;
             }
@@ -89,7 +90,7 @@
   </head>
   
   <body>
-    <button id="article" value="a">Suggest Article</button>
+    <button id="article">Suggest Article</button>
   </body>
 
 </html>

@@ -64,6 +64,21 @@ function buildPopupDom(divName, data) {
 
     ul.appendChild(li);
   }
+
+  //if conservative
+  if((left_map.length + leftcenter_map.length) < (right_map.length + rightCenter_map.length)){
+    var bias = 1;
+    suggestArticle(bias);
+  }
+  //else if liberal
+  else if ((left_map.length + leftcenter_map.length) > (right_map.length + rightCenter_map.length)){
+    var bias = 0;
+    suggestArticle(bias);
+  }
+  else {
+    var bias = 2;
+    suggestArticle(bias);
+  }
 }
 
 // Search history to find up to ten links that a user has typed in,
@@ -302,7 +317,6 @@ var trimURL = function trimURL(url){
   return result2[0].trim();
 }
 
-
 var currentTab = function currentTab() {
 
   var currentURL;
@@ -343,4 +357,93 @@ function buildPopupDom2(divName, currentT) {
 
     ul.appendChild(li);
   }
+
+
+function suggestArticle(bias){
+    var lines = [];
+    var file;
+    var leftCenterSites = [{site:'http://www.bbc.com', siteCode:'bbc-news'},
+                 {site:'http://www.bloomberg.com', siteCode:'bloomberg'},
+                 {site:'http://www.businessinsider.com', siteCode:'business-insider'},
+                 {site:'http://www.buzzfeed.com', siteCode:'buzzfeed'},
+                 {site:'http://www.cnbc.com', siteCode:'cnbc'},
+                 {site:'http://www.cnn.com', siteCode:'cnn'},
+                 {site:'http://www.engadget.com', siteCode:'engadget'},
+                 {site:'http://www.metrouk.com', siteCode:'metro'},
+                 {site:'http://www.newsweek.com', siteCode:'newsweek'},
+                 {site:'http://www.skynews.com', siteCode:'sky-news'},
+                 {site:'http://www.spiegelonline.com', siteCode:'spiegel-online'},
+                 {site:'http://www.theguardian.com', siteCode:'the-guardian-uk'},
+                 {site:'http://www.thehindu.com', siteCode:'the-hindu'},
+                 {site:'http://www.time.com', siteCode:'time'},
+                 {site:'http://www.wiredmagazine.com', siteCode:'wired-de'}];
+    var leftSites = [{site:'http://www.mashable.com', siteCode:'mashable'},
+                     {site:'http://www.newyorkmagazine.com', siteCode:'new-york-magazine'},
+                     {site:'http://www.huffingtonpost.com', siteCode:'the-huffington-post'}];
+    var rightCenterSites = [{site:'http://www.fortunemagazine.com', siteCode:'fortune'},
+                     {site:'http://www.wallstreetjournal.com', siteCode:'the-wall-street-journal'}];
+   $(document).ready(function(){
+      var source;
+      var ran;
+      $("button").click(function(){
+
+        //if conservative, suggest liberal media source
+        if(bias == 1){
+          ran = Math.floor((Math.random()* (leftSites.length)) + 1);
+          source = leftSites[ran].siteCode;
+
+          $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
+            if(data){
+              console.log(data.articles[0].url);
+
+              $('a#suggest-link').text(data.articles[0].title);
+              $('a#suggest-link').attr('href', data.articles[0].url);
+              ran = Math.floor((Math.random()* (leftSites.length-1)) + 0);
+              source = leftSites[ran].siteCode;
+            }
+            else{
+              console.log('Error');
+            }
+          });
+        }
+        //if liberal, suggest conservative media source
+        else if(bias == 0){
+          ran = Math.floor((Math.random()* (rightCenterSites.length)) + 1);
+          source = rightCenterSites[ran].siteCode;
+          $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
+            if(data){
+              console.log(data.articles[0].url);
+
+              $('a#suggest-link').text(data.articles[0].title);
+              $('a#suggest-link').attr('href', data.articles[0].url);
+              ran = Math.floor((Math.random()* (rightCenterSites.length-1)) + 0);
+              source = rightCenterSites[ran].siteCode;
+            }
+            else{
+              console.log('Error');
+            }
+          });
+        }
+        //suggest more center-left article
+        else{
+          ran = Math.floor((Math.random()* (leftCenterSites.length)) + 1);
+          source = leftCenterSites[ran].siteCode;
+
+          $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
+            if(data){
+              console.log(data.articles[0].url);
+
+              $('a#suggest-link').text(data.articles[0].title);
+              $('a#suggest-link').attr('href', data.articles[0].url);
+              ran = Math.floor((Math.random()* (leftCenterSites.length-1)) + 0);
+              source = leftCenterSites[ran].siteCode;
+            }
+            else{
+              console.log('Error');
+            }
+          });
+        }
+      });
+    });
+}
 }
