@@ -65,15 +65,11 @@ function buildTypedUrlList(divName) {
 
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
+        var trimmedUrl = trimURL(url);
 
-        //console.log("media left length "+media_left.length);
-        //var news = media_left;
-
-        //console.log("newslength "+news.length);
-        //for (var j = 0; j < media_left.length; j++) {
-		var shortt = url.substring(0,20);
-          if (shortt in left_map) {
-			  console.log("TRIM IN THERE",shortt)
+        console.log("Trimmed url = "+trimmedUrl+" length of string= "+trimmedUrl.length);
+        if (trimmedUrl in left_map) {
+			   console.log("Match! trimmed value",trimmedUrl)
             var processVisitsWithUrl = function(url) {
               // We need the url of the visited item to process the visit.
               // Use a closure to bind the  url into the callback's args.
@@ -168,10 +164,11 @@ var loadData1 = function loadData1(){
           if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
           {
               media_left = xhr.responseText.split("\n");
-			  for (var j = 0; j < media_left.length; j++) {
-				  var trim = media_left[j].substring(0,20);
-				  left_map[trim] = "left";
-			};
+      			  for (var j = 0; j < media_left.length; j++) {
+      				  var trim = trimURL(media_left[j]);
+                console.log("in loadData1 trim val= " +trim+" trim length = "+trim.length);
+      				  left_map[trim] = "left";
+			        }
               console.log("loading left data");
               resolve("loaded left");
           }
@@ -244,4 +241,11 @@ var loadData5 = function loadData5(){
           }
       };
     });
+}
+
+// trims the front and end to be just www.webName.com
+var trimURL = function trimURL(url){
+  var result = url.split("://", 2);   // cut front
+  var result2 = result[1].split('/');   // cut back
+  return result2[0].trim();
 }
