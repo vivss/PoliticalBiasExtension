@@ -64,24 +64,10 @@ function buildTypedUrlList(divName) {
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
 
-        var news =
-        ["https://www.nytimes.com/",
-        "https://www.cnn.com",
-        "https://www.yahoo.com",
-        "https://news.google.com/",
-        "http://www.huffingtonpost.com/",
-        "http://www.foxnews.com/",
-        "http://www.nbcnews.com/",
-        "http://www.dailymail.co.uk/",
-        "https://www.washingtonpost.com/",
-        "https://www.theguardian.com/",
-        "https://www.wsj.com/",
-        "http://abcnews.go.com/",
-        "http://www.bbc.co.uk/news",
-        "http://www.usatoday.com/",
-        "http://www.latimes.com/"
-        ];
+        console.log("media left length "+media_left.length);
+        var news = media_left;
 
+        console.log("newslength "+news.length);
         for (var j = 0; j < news.length; j++) {
           if (url.startsWith(news[j])) {
             var processVisitsWithUrl = function(url) {

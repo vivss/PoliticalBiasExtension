@@ -29,7 +29,7 @@ for line in f:
 		newcontent = line
 	sys.stdout.write('"http://www.'+newcontent+'.com"\n')
 	#print newcontent
-	newfile.write('"'+newcontent+'.com"\n')
+	newfile.write('"http://www.'+newcontent+'.com"\n')
 
 
 f.close()
