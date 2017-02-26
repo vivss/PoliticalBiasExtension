@@ -55,7 +55,7 @@ function suggestArticle(bias){
 
         //if conservative, suggest liberal media source
         if(bias == 1){
-          ran = Math.floor((Math.random()* (leftSites.length)) + 1);
+          ran = Math.floor((Math.random()* (leftSites.length)) + 0);
           source = leftSites[ran].siteCode;
 
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
@@ -64,7 +64,7 @@ function suggestArticle(bias){
 
               $('a#suggest-link').text(data.articles[0].title);
               $('a#suggest-link').attr('href', data.articles[0].url);
-              ran = Math.floor((Math.random()* (leftSites.length-1)) + 0);
+              ran = Math.floor((Math.random()* (leftSites.length)) + 0);
               source = leftSites[ran].siteCode;
             }
             else{
@@ -74,7 +74,7 @@ function suggestArticle(bias){
         }
         //if liberal, suggest conservative media source
         else if(bias == 0){
-          ran = Math.floor((Math.random()* (rightCenterSites.length)) + 1);
+          ran = Math.floor((Math.random()* (rightCenterSites.length)) + 0);
           source = rightCenterSites[ran].siteCode;
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
             if(data){
@@ -82,7 +82,7 @@ function suggestArticle(bias){
 
               $('a#suggest-link').text(data.articles[0].title);
               $('a#suggest-link').attr('href', data.articles[0].url);
-              ran = Math.floor((Math.random()* (rightCenterSites.length-1)) + 0);
+              ran = Math.floor((Math.random()* (rightCenterSites.length)) + 0);
               source = rightCenterSites[ran].siteCode;
             }
             else{
@@ -92,7 +92,7 @@ function suggestArticle(bias){
         }
         //suggest more center-left article
         else{
-          ran = Math.floor((Math.random()* (leftCenterSites.length)) + 1);
+          ran = Math.floor((Math.random()* (leftCenterSites.length)) + 0);
           source = leftCenterSites[ran].siteCode;
 
           $.getJSON("https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=3f028ddd73fa48ff89bcacbd1fa7dd35", function(data) {
@@ -101,7 +101,7 @@ function suggestArticle(bias){
 
               $('a#suggest-link').text(data.articles[0].title);
               $('a#suggest-link').attr('href', data.articles[0].url);
-              ran = Math.floor((Math.random()* (leftCenterSites.length-1)) + 0);
+              ran = Math.floor((Math.random()* (leftCenterSites.length)) + 0);
               source = leftCenterSites[ran].siteCode;
             }
             else{
