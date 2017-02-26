@@ -30,6 +30,7 @@ function buildPopupDom(divName, data) {
   for (var i = 0, ie = data.length; i < ie; ++i) {
     var a = document.createElement('a');
     a.href = data[i];
+    a.style.color = "blue";
     a.appendChild(document.createTextNode(data[i]));
     a.addEventListener('click', onAnchorClick);
 
