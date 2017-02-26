@@ -66,16 +66,18 @@ function buildPopupDom(divName, data) {
   }
 
   //if conservative
-  if((left_map.length + leftcenter_map.length) < (right_map.length + rightCenter_map.length)){
+  if((media_left.length + media_leftCenter.length) < (media_right.length + media_rightCenter.length)){
     var bias = 1;
     suggestArticle(bias);
   }
   //else if liberal
-  else if ((left_map.length + leftcenter_map.length) > (right_map.length + rightCenter_map.length)){
+  else if ((media_left.length + media_leftCenter.length) > (media_right.length + media_rightCenter.length)){
     var bias = 0;
     suggestArticle(bias);
   }
   else {
+    console.log(media_left.length + media_leftCenter.length);
+    console.log(media_right.length + media_rightCenter.length);
     var bias = 2;
     suggestArticle(bias);
   }
