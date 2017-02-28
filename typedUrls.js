@@ -289,7 +289,7 @@ var loadData1 = function loadData1(){
     return new Promise(function(resolve,reject){
       // left
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', chrome.extension.getURL('media_data/Left.txt'), true);
+      xhr.open('GET', chrome.extension.getURL('media_data/left.txt'), true);
       xhr.onreadystatechange = function()
       {
           if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
